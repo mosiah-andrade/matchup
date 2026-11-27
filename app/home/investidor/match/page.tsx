@@ -1,6 +1,8 @@
 "use client";
 
-import MatchResult from "../../components/MatchResult";
+import dynamic from "next/dynamic";
+
+const MatchResult = dynamic(() => import("../../components/MatchResult"), { ssr: false });
 
 export default function MatchRealizado() {
   return <MatchResult role="investidor" />;
